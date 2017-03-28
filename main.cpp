@@ -19,6 +19,7 @@
 // ======================================================================
 
 #include <QApplication>
+#include <QHBoxLayout>
 #include "OGLPyramid.h"
 
 // ----------------------------------------------------------------------
@@ -26,9 +27,13 @@ int main(int argc, char** argv)
 {
     QApplication app(argc, argv);
     OGLPyramid   oglPyramid;
+   //    QGLWidget *window = new QGLWidget(&oglPyramid);
+  //     QHBoxLayout *layout = new QHBoxLayout;
+   //    layout->addWidget(&oglPyramid);
+       oglPyramid.resize(200, 200);
+       oglPyramid.show();
+   //    window->show();
 
-    oglPyramid.resize(200, 200);
-    oglPyramid.show();
 
     return app.exec();
 }
